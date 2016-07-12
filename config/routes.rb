@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   resources :posts
   resource :users
+  get 'signup' => 'users#new'
 end
