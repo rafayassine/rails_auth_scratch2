@@ -4,6 +4,5 @@
     %p.text-center This is an app with a full authentification system coded from scratch without using any gems besides bcrypt.
     %p.text-center Test it out!
     .btn-jumbotron.text-center
-      %a.btn.btn-primary{:role => "button"} Sign Up
+      =link_to "Sign Up", signup_path, :class => "btn btn-primary"
       %a.btn.btn-primary{:role => "button"} Log In
-      
