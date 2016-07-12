@@ -12,15 +12,22 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post
     else
-      render 'new'
+      render new_post_path
     end
   end
   def edit
-    
+
   end
   def update
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render edit_post_path
+    end
   end
   def destroy
+    @post.destroy
+    redirect_to posts_path
   end
 
   private
