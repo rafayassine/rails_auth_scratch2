@@ -1,9 +1,10 @@
-%nav.pull-right
-  =link_to 'Sign Out', signout_path
--@posts.each do |post|
-  %h1= link_to post.title, post
-  %p= truncate(post.content, length: 100)
-  = link_to "Edit post", edit_post_path(post.id)
-%br
-%br
-= link_to 'Create a post', new_post_path
+.container
+  %nav.pull-right
+    =link_to 'Sign Out', signout_path
+  -@posts.each do |post|
+    %h1= link_to post.title, post
+    %p= truncate(post.content, length: 100)
+    = link_to "Edit post", edit_post_path(post.id)
+  %br
+  %br
+  = link_to 'Create a post', new_post_path
